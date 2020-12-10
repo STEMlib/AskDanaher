@@ -8,7 +8,7 @@ function generateRandomInteger(data) {
     var random_int = Object.keys(recipeData)[Math.floor(Math.random()*Object.keys(recipeData).length)];
     var specific_recipe = recipeData[random_int];
 
-    return recipeData
+    return specific_recipe
 }
 
 // Grab Ingredients in HTML
@@ -20,7 +20,8 @@ function buildTable(data) {
     // First, clear out any existing data
     ingredients_table.html("");
 
-    specific_recipe = generateRandomInteger(data);
+    //specific_recipe = generateRandomInteger(data);
+    specific_recipe = data
 
     // Instantiate relevant variables for quick retrieval
     var recipe_keys = Object.keys(specific_recipe);
