@@ -8,7 +8,7 @@ function generateRandomInteger(data) {
     var random_int = Object.keys(recipeData)[Math.floor(Math.random()*Object.keys(recipeData).length)];
     var specific_recipe = recipeData[random_int];
 
-    return specific_recipe
+    return recipeData
 }
 
 // Grab Ingredients in HTML
@@ -101,7 +101,7 @@ function handleClickRandom() {
 }
 
 // Attach an event to listen for the search recipes button
-d3. select("#search-btn").on("click", handleClickSearch);
+d3.select("#search-btn").on("click", handleClickSearch);
 
 // Attach an event to listen for the generate random recipe button
 d3.select("#filter-btn").on("click", handleClickRandom);
